@@ -11,5 +11,6 @@ webview {
     height: 100%;
     margin: 0 auto;
     overflow: auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
