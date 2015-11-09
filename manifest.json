@@ -32,5 +32,29 @@
       "background": {
         "scripts": ["pcasts.js"]
     }
+  },
+
+  "commands": {
+    "pause": {
+      "suggested_key": {
+        "default": "MediaPlayPause"
+      },
+      "description": "Play/Pause",
+      "global": true
+    },
+    "next": {
+      "suggested_key": {
+        "default": "MediaNextTrack"
+      },
+      "description": "Next Song",
+      "global": true
+    },
+    "previous": {
+      "suggested_key": {
+        "default": "MediaPrevTrack"
+      },
+      "description": "Previous Song",
+      "global": true
+    }
   }
 }
