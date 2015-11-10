@@ -32,6 +32,16 @@ chrome.app.runtime.onLaunched.addListener(function () {
                 e.preventDefault();
                 window.open(e.targetUrl);
             });
+
+            chrome.commands.onCommand.addListener(function(command) {
+                //console.log('Command:', command);
+                if(command == "pause")
+                    webview.executeScript({ code: "document.getElementsByClassName('play_pause_button')[0].click();" });
+                if(command == "next")
+                    webview.executeScript({ code: "document.getElementsByClassName('skip_forward_button')[0].click();" });
+                if(command == "previous")
+                    webview.executeScript({ code: "document.getElementsByClassName('skip_back_button')[0].click();" });
+            });
         };
     });
 });
