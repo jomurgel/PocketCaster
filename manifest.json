@@ -1,10 +1,10 @@
 {
-  
+
   "manifest_version": 2,
   "name": "PocketCaster",
   "short_name": "PocketCaster",
   "description": "",
-  "version": "1.1.2",
+  "version": "2.0",
   "minimum_chrome_version": "38",
   "permissions": [ 
     "https://pocketcasts.com/", 
@@ -24,13 +24,36 @@
     "128": "assets/icon_128.png", 
     "256": "assets/icon_256.png"
   },
-  
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6xMNXAjMaxi0MGscTD+2FnUM7ihsPBeHksU1oWHiEUBChWY4G/RrwELkSoGTEKQv4AYocr4VqqyljYVTRVG0yIoa49RTdTzQwm4N0K0Uxhjofu9uy0jaH+SZq7GjqF74QrDOiCoIAulNZj9BXMyqsS2UQoXfCH8YNGrAjmU17yvTg7XmxK192+NaoQ+OwhwYLJJGd/rVU0hwGKHdNwBUCi1+dt6mEVBH53aBqYg68hIP0DHJVppPzwlyHet5AsvUFCkSuPtkC9Cfpz4qiDHAbgwm7HhpjYuzBge3yZMUgBXy7/3xTUI1G59hgTJUs0XrIKae0ieFBtnfrP1bbtnluQIDAQAB",
-  
+
   "app": {
       "background": {
         "scripts": ["pcasts.js"]
+    }
+  },
+
+  "commands": {
+    "pause": {
+      "suggested_key": {
+        "default": "MediaPlayPause"
+      },
+      "description": "Play/Pause",
+      "global": true
+    },
+    "next": {
+      "suggested_key": {
+        "default": "MediaNextTrack"
+      },
+      "description": "Next Song",
+      "global": true
+    },
+    "previous": {
+      "suggested_key": {
+        "default": "MediaPrevTrack"
+      },
+      "description": "Previous Song",
+      "global": true
     }
   }
 }

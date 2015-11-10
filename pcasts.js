@@ -5,7 +5,7 @@
  * @see http://developer.chrome.com/apps/app.window.html
  */
 chrome.app.runtime.onLaunched.addListener(function () {
-    
+
     // Center this shiz.  Boom.
     var screenWidth = screen.availWidth;
     var screenHeight = screen.availHeight;
@@ -28,9 +28,19 @@ chrome.app.runtime.onLaunched.addListener(function () {
 
             webview.addEventListener('newwindow', function (e) {
               // Event handler for when external links are clicked because of
-				    	// the Chrome packaged app security restriction on opening links in the regular browser
+                        // the Chrome packaged app security restriction on opening links in the regular browser
                 e.preventDefault();
                 window.open(e.targetUrl);
+            });
+
+            chrome.commands.onCommand.addListener(function(command) {
+                //console.log('Command:', command);
+                if(command == "pause")
+                    webview.executeScript({ code: "if( document.getElementById('players').style.display = 'block') { document.getElementsByClassName('play_pause_button')[0].click() };" });
+                if(command == "next")
+                    webview.executeScript({ code: "document.getElementsByClassName('skip_forward_button')[0].click();" });
+                if(command == "previous")
+                    webview.executeScript({ code: "document.getElementsByClassName('skip_back_button')[0].click();" });
             });
         };
     });
