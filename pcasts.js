@@ -36,7 +36,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
             chrome.commands.onCommand.addListener(function(command) {
                 //console.log('Command:', command);
                 if(command == "pause")
-                    webview.executeScript({ code: "if( document.getElementById('players').style.display = 'block') { document.getElementsByClassName('play_pause_button')[0].click() };" });
+                    webview.executeScript({ code: "document.getElementsByClassName('animated-play-button')[0].click();" });
                 if(command == "next")
                     webview.executeScript({ code: "document.getElementsByClassName('skip_forward_button')[0].click();" });
                 if(command == "previous")
