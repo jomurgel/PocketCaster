@@ -4,7 +4,7 @@
   "name": "PocketCaster",
   "short_name": "PocketCaster",
   "description": "",
-  "version": "2.0",
+  "version": "2.0.1",
   "minimum_chrome_version": "38",
   "permissions": [ 
     "https://pocketcasts.com/", 
