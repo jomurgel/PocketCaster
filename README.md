@@ -8,6 +8,7 @@ Needed a chrome app for Pocket Casts. Tabs are so last year.
 
 Changelog
 ------------
+2.0.1 Beta support! Get the new experience at [playbeta.pocketcasts.com](https://playbeta.pocketcasts.com).  Thaks [xeratun](https://github.com/xeratun).
 
 2.0 MediaKey support! Thanks [matthewdias](https://github.com/matthewdias).
 
