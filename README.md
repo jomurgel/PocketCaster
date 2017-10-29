@@ -1,6 +1,8 @@
 Pocket Caster
 ======
 
+NOTE: Due to Google's phase-out of Chrome standalone apps, I've moved my attention to a desktop app found [here](https://github.com/jomurgel/PocketCasterApp).
+
 Needed a chrome app for Pocket Casts. Tabs are so last year.
 
 ## Screenshot
